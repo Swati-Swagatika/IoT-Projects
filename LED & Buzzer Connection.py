@@ -1,0 +1,16 @@
+import RPi.GPIO as GPIO
+import time
+GPIO.setmode(GPIO.BCM)
+GPIO.setwarnings(False)
+GPIO.setup(8,GPIO.OUT)
+GPIO.setup(2,GPIO.OUT)
+GPIO.output(8,GPIO.HIGH)
+print("LED TURNS ON")
+time.sleep(5)
+GPIO.output(8,GPIO.HIGH)
+GPIO.output(2,GPIO.HIGH)
+print("BUZZER IS ON")
+time.sleep(10)
+GPIO.output(2,GPIO.LOW)
+GPIO.output(8,GPIO.HIGH)
+print("BUZZER IS OFF")
